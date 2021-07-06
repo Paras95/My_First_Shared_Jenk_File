@@ -45,12 +45,12 @@ pipeline
           }
           
           agent any
-        withMaven{
-         sh "mvn clean install" 
-        }
         
           steps{
-              
+            
+            withMaven{
+         sh "mvn clean install" 
+        }  
               echo "In Non_Sequential"
               echo "My Name is ${params.PERSON}"
               
