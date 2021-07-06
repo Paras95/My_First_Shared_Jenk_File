@@ -49,7 +49,7 @@ pipeline
           steps{
             
             withMaven{
-         sh "mvn clean install" 
+         sh 'mvn clean install'
         }  
               echo "In Non_Sequential"
               echo "My Name is ${params.PERSON}"
