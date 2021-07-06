@@ -34,7 +34,7 @@ pipeline
     stages
     {
 
-      stage('Non_Sequential')
+      stage('For_Sequential')
       {
         when { environment name: 'For_Sequential', value: 'some_val' }
 
