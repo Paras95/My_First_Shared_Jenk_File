@@ -1,26 +1,5 @@
-pipeline
-{
-   agent any
-   tools {
-        maven 'maven' 
-    }
-  stages{
-    stage('Build')
-    {
-      steps{
-         echo "Building....."
-         sh 'mvn clean install'
-        sh 'mvn --version'
-      
-        }
-    
-    }
-  
-  
-  
-  
-  }
-  
-
-
+@Library('utils') import org.foo.Utilities
+def utils = new Utilities(this)
+node {
+  utils.mvn 'clean package'
 }
