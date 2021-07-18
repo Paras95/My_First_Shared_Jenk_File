@@ -9,6 +9,7 @@ pipeline{
             paras()
             paras.beta()
             paras.class1()
+            paras.unique('kartik')
         }
       }
     }
