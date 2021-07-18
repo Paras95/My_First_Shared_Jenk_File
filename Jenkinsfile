@@ -1,7 +1,7 @@
 @Library('utils') _
 
 pipeline{
-
+  agent any
   stages{
     stage('lib_from_vars'){
       steps{
