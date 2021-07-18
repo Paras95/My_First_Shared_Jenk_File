@@ -1,5 +1,15 @@
-@Library('utils') import org.foo.Utilities
-def utils = new Utilities(this)
-node {
-  utils.mvn 'clean package'
+@Library('utils') _
+
+pipeline{
+
+  stages{
+    stage('lib_from_vars'){
+      steps{
+        script{
+            paras()
+            paras.beta()
+        }
+      }
+    }
+  }
 }
