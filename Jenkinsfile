@@ -8,7 +8,7 @@ pipeline{
         script{
             paras()
             paras.beta()
-            paras.class1(this, this)
+            paras.class1()
         }
       }
     }
